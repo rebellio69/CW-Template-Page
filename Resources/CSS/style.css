@@ -3,6 +3,14 @@ font-family: 'Lato', sans-serif;
 font-family: 'Ubuntu Mono', monospace;
 font-family: 'Ubuntu', sans-serif; */
 /* latin-ext */
+/* latin */
+@font-face {
+  font-family: 'Walter Turncoat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Walter Turncoat Regular'), local('WalterTurncoat-Regular'), url(https://fonts.gstatic.com/s/walterturncoat/v8/snfys0Gs98ln43n0d-14ULoToe6LZxec.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 @font-face {
   font-family: 'Courgette';
   font-style: normal;
@@ -63,26 +71,43 @@ html {
 	font-size: 16px;
 }
 .container {
-	font-family: 'Ubuntu', sans-serif;
-  background-color: #e0e0d1;
+  background-color: #c9b6c6;
+
+}
+.content {
+  font-family: 'Ubuntu', sans-serif;
+  padding: 1rem;
+  line-height: 1.5rem;
+  color: #3a3a3a;
+  font-size: 1.25rem;
 }
 .container i {
   padding: 0.5rem;
 }
 h1, h2 {
-  padding: 1rem;
+  font-family: 'UbuntuMono', sans-serif;
   font-weight: bold;
   color: white;
 }
 h1 {
-  font-size: 2rem;
+  font-size: 2.25rem;
 }
 h2 {
-  font-size: 1.5rem;
-  background-color: #2b96ab;
+  font-size: 1.75rem;
 }
-p {
-  font-size: 1rem;
+ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+li {
+  padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+}
+li a:hover {
+  color: #89357c;
+  font-weight: bold;
+}
+.considerations, .middle, .overview {
+  padding: 1rem;
 }
 
 /*Header Section*/
@@ -94,9 +119,9 @@ header {
 	position: fixed;
 	z-index: 1;
 	width: 100%;
-	background-color: #1a7b90;
-	opacity: 0.8;
-  border-bottom: 2px solid #3a3a3a;
+	background-color: #bf5ab0;
+	opacity: 0.9;
+  border-bottom: 2px solid #c9c6b6;
 }
 .logo {
 	flex-grow: 1;
@@ -106,6 +131,10 @@ header {
 .logo img {
   height: 3rem;
   width: auto;
+  transition: background-color 0.2s ease-in 0.1s;
+}
+.logo img:hover {
+  background-color: #89357c;
 }
 header nav {
 	padding-right: 1.5rem;
@@ -114,13 +143,13 @@ nav span {
 	padding-left: 1rem;
 }
 span a {
-  color: white;
+  color: #89357c;
 	font-weight: bold;
   font-size: 1.5rem;
   transition: color 0.2s ease-in 0.1s;
 }
 span a:hover {
-	color: #89357c;
+	color: white;
 }
 nav input[type=text] {
   height: 1.5rem;
@@ -130,13 +159,23 @@ nav input[type=text]:hover {
   background-color: #89357c;
   transition: 0.2s ease-in 0.1s;
 }
+.fa-bars {
+  color: #89357c;
+  font-size: 1.5rem;
+}
+.fa-bars:hover {
+  color: white;
+  transition: 0.2s ease-in 0.1s;
+}
 
+/*Side Navigation*/
 /* The side navigation menu */
 .sidenav {
   height: 100%;
   width: 0;
   position: fixed;
   z-index: 2;
+  top: 0;
   right: 0;
   background-color: #89357c;
   opacity: 0.9;
@@ -164,8 +203,13 @@ nav input[type=text]:hover {
   margin-left: 50px;
   color: #2b96ab;
 }
-.sidenav h1 {
-  background-color: #c9b6c6;
+.sidenav span h1 {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  background-color: #bf5ab0;
+  border-bottom: 2px solid #c9c6b6;
 }
 
 /*Title Section*/
@@ -178,35 +222,56 @@ nav input[type=text]:hover {
 }
 .title h1 {
   background-color: #89357c;
-}
-
-/*Grid Section*/
-.grid {
-  display: grid;
-  grid-template: 30vh 30vh 30vh / 1fr 1fr;
   padding: 1rem;
+}
+
+/*Overview Section*/
+.overview h2 {
+  background-color: #2b96ab;
+}
+.expand-button {
+  position: relative;
+  left: 90%;
+  bottom: 0;
+  font-size: 1rem;
+  background-color: #c9b6c6;
+  color: black;
+  margin: 1rem 0.5rem 0.5rem 0.5rem;
+  padding: 0.75rem;
+  border: 1px solid #2b96ab;
 
 }
-.overview, .actions, .resources, .considerations {
-  border: 1px solid #3a3a3a;
+.expand-button:hover {
+  color: white;
+  background-color: #2b96ab;
 }
-.overview, .considerations {
-  grid-column: 1 / span 2;
+
+/*Middle Section*/
+.middle {
+  display: flex;
 }
-.actions {
-  grid-column: 1 / 2;
-}
-.resources {
-  grid-column: 2 / 2;
+.actions, .resources {
+  width:  50%;
 }
 .actions h2, .resources h2 {
-background-color: #28429e;
+background-color: #5f9637;
 }
+.actions {
+  padding-right: 0.5rem;
+}
+.resources {
+  padding-left: 0.5rem;
+}
+
+
+/*Considerations Section*/
 .considerations h2 {
 background-color: #e98624;
 }
 
-
+#full {
+  display: none;
+}
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {

@@ -6,60 +6,123 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="resources/css/reset.css">
     <link rel="stylesheet" type="text/css" href="resources/css/style.css">
-    <script type="text/javascript" src="resources/js/script.js"></script>
+    <script type="text/javascript" src="resources/js/home-page.js"></script>
   </head>
   <body>
 
   <!--Side Bar Navigation-->
-  <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="far fa-times-circle"></i></a>
-    <h1>Information Centre</h1>
-    <a href="#">Forms</a>
-    <a href="#">Legislation</a>
-    <a href="#">Toolbox</a>
-    <a href="#">Standards of Practice</a>
-    <a href="#">Competencies</a>
-  </div>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="far fa-times-circle"></i></a>
+      <span><h1>Information Centre</h1></span>
+      <a href="#">Forms</a>
+      <a href="#">Legislation</a>
+      <a href="#">Toolbox</a>
+      <a href="#">Standards of Practice</a>
+      <a href="#">Competencies</a>
+    </div>
 
   <!--Top section with navigation-->
-  <header class="main-header">
-    <div class="logo">
-      <a href="#"><img src="resources/images/tatou-logo.png" alt="logo"></a>
-    </div>
-    <nav class="main-nav">
-      <span><a href="#"><i class="fas fa-home"></i></a></span>
-      <span><a href="#">CW</a></span>
-      <span><a href="#">IOMS</a></span>
-      <span onclick="openNav()"><i class="fas fa-bars"></i></span>
-      <span><input type="text" placeholder="Search.."></span>
-    </nav>
-  </header>
+    <header class="main-header">
+      <div class="logo">
+        <a href="#"><img src="resources/images/tatou-logo.png" alt="logo"></a>
+      </div>
+      <nav class="main-nav">
+        <span><a href="#"><i class="fas fa-home"></i></a></span>
+        <span><a href="#"><i class="fas fa-warehouse"></i></a></span>
+        <span><a href="#">IOMS</a></span>
+        <span onclick="openNav()"><i class="fas fa-bars"></i></span>
+        <span><input type="text" placeholder="Search.."></span>
+      </nav>
+    </header>
 
   <!--Title Section-->
-  <div class="title container">
-    <h1><i class="fas fa-angle-double-right"></i>Health and Safety</h1>
-  </div>
+    <div class="title container">
+      <h1><i class="fas fa-angle-double-right"></i>Health and Safety</h1>
+    </div>
 
-  <!--Grid Section-->
-  <div class="grid container">
     <!--Overview Section-->
       <div class="overview container">
         <h2><i class="fas fa-angle-double-right"></i>Overview</h2>
-      </div>
+        <div class="content" id="outline">
+          <p>I refuse to accept the view that mankind is so tragically bound to the starless
+          midnight of racism and war that the bright daybreak of peace and brotherhood can
+          never become a reality.  I believe that unarmed truth and unconditional love will
+          have the final word.</p>
+          <p>Human progress is neither automatic nor inevitable... Every step toward the goal of
+          justice requires sacrifice, suffering, and struggle; the tireless exertions and
+          passionate concern of dedicated individuals.</p>
+        </div>
+
+        <div class="content" id="full">
+          <p>Another way that you love your enemy is this: When the opportunity presents itself
+          for you to defeat your enemy, that is the time which you must not do it.
+          There will come a time, in many instances, when the person who hates you most,
+          the person who has misused you most, the person who has gossiped about you most,
+          the person who has spread false rumors about you most,
+          there will come a time when you will have an opportunity to defeat that person.
+          It might be in terms of a recommendation for a job; it might be in terms of helping that
+          person to make some move in life. That’s the time you must do it. That is the meaning of
+          love.</p>
+	       </div>
+         <button class="expand-button" onclick="expandFunction()">More / Less</button>
+       </div>
+
+  <!--Actions Section-->
+  <div class="middle container">
     <!--Actions Section-->
       <div class="actions container">
         <h2><i class="fas fa-angle-double-right"></i>Required Actions</h2>
-      </div>
-    <!-- Section-->
-        <div class="resources container">
-          <h2><i class="fas fa-angle-double-right"></i>Useful Resources</h2>
+        <div class="content">
+          <ul>
+            <li>Prohibits Congress from making any law respecting an establishment of religion, impeding
+            the free exercise of religion, abridging the freedom of speech, infringing on the freedom
+            of the press, interfering with the right to peaceably assemble or prohibiting the
+            right to petition the government</li>
+            <li>Protects the right to keep and bear arms</li>
+            <li>Places restrictions on the quartering of soldiers in private homes</li>
+            <li>Prohibits unreasonable searches and seizures and sets out requirements for search warrants
+            based on probable cause</li>
+            <li>Sets out rules for indictment by grand jury and eminent domain, protects the right to
+            due process, and prohibits self-incrimination and double jeopardy</li>
+            <li>Protects the right to a fair and speedy public trial by jury, including the rights to be
+            notified of the accusations, to confront the accuser, to obtain witnesses and to retain
+            counsel</li>
+          </ul>
         </div>
+      </div>
+
+    <!-- Resources Section-->
+      <div class="resources container">
+        <h2><i class="fas fa-angle-double-right"></i>Useful Resources</h2>
+        <div class="content">
+          <ul>
+            <li><a href="#">Section 72 of the Sentencing Act 2002</a></li>
+            <li><a href="#">Form<a></li>
+          </ul>
+        </div>
+
+      </div>
+  </div>
+
     <!--Considerations Section-->
       <div class="considerations container">
         <h2><i class="fas fa-angle-double-right"></i>Considerations</h2>
+        <div class="content">
+          <p>In Flanders Fields the poppies blow between the crosses, row on row, that mark
+            our place; and in the sky the larks, still bravely singing, fly scarce heard
+            amid the guns below.  We are the Dead, short days ago we lived, felt dawn, saw
+            sunset glow, loved and were loved, and now we lie in Flanders Fields.
+          </p>
+          <p>Take up your quarrel with the foe; to you from failing hands we throw
+            the torch; be yours to hold it high, if ye break faith with us who die
+            we shall not sleep, though poppies grow In Flanders Fields.
+          </p>
+
+        </div>
+
       </div>
 
-  </div>
+
 
   </body>
 </html>
