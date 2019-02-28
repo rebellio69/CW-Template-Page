@@ -72,7 +72,6 @@ html {
 }
 .container {
   background-color: #c9b6c6;
-
 }
 .content {
   font-family: 'Ubuntu', sans-serif;
@@ -84,7 +83,7 @@ html {
 .container i {
   padding: 0.5rem;
 }
-h1, h2 {
+h1, h2, h3, h4 {
   font-family: 'UbuntuMono', sans-serif;
   font-weight: bold;
   color: white;
@@ -95,18 +94,27 @@ h1 {
 h2 {
   font-size: 1.75rem;
 }
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.35rem;
+}
+h5 {
+  font-weight: bold;
+}
 ul {
   list-style-type: disc;
   padding-left: 1.5rem;
 }
 li {
-  padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
-li a:hover {
+a:hover {
   color: #89357c;
   font-weight: bold;
 }
-.considerations, .middle, .overview {
+.considerations, .middle, .actions, .resources {
   padding: 1rem;
 }
 
@@ -169,7 +177,7 @@ nav input[type=text]:hover {
 }
 
 /*Side Navigation*/
-/* The side navigation menu */
+/*The side navigation menu*/
 .sidenav {
   height: 100%;
   width: 0;
@@ -182,7 +190,7 @@ nav input[type=text]:hover {
   overflow-x: hidden;
   transition: 0.5s ease-in;
 }
-/* The navigation menu links */
+/*The navigation menu links*/
 .sidenav a {
   padding: 0.5rem 1rem 0.5rem 2rem;
   text-decoration: none;
@@ -194,7 +202,6 @@ nav input[type=text]:hover {
 .sidenav a:hover {
   color: white;
 }
-
 .sidenav .closebtn {
   position: absolute;
   top: 0.5rem;
@@ -239,38 +246,49 @@ nav input[type=text]:hover {
   margin: 1rem 0.5rem 0.5rem 0.5rem;
   padding: 0.75rem;
   border: 1px solid #2b96ab;
-
 }
 .expand-button:hover {
   color: white;
   background-color: #2b96ab;
+}
+#full {
+  display: none;
 }
 
 /*Middle Section*/
 .middle {
   display: flex;
 }
-.actions, .resources {
-  width:  50%;
+.SOP, .decisions {
+  width: 50%;
 }
-.actions h2, .resources h2 {
+.SOP h2, .decisions h2 {
 background-color: #5f9637;
 }
-.actions {
+.SOP {
   padding-right: 0.5rem;
 }
-.resources {
+.decisions {
   padding-left: 0.5rem;
 }
+.decisions h5 {
+  padding-top: 0.5rem;
+}
+.decisions li {
+  padding-left: 0.75rem;
+}
+.decisions ul {
+  padding-left: 3rem;
+}
 
-
-/*Considerations Section*/
-.considerations h2 {
+/*Possible Actions Section*/
+.actions h2 {
 background-color: #e98624;
 }
 
-#full {
-  display: none;
+/*Resources Section*/
+.resources h2 {
+  background-color: #3b58b8;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
