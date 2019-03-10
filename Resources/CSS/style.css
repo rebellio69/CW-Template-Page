@@ -110,6 +110,10 @@ ul {
 li {
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
+.bullets {
+  list-style-type: circle;
+
+}
 a:hover {
   color: #89357c;
   font-weight: bold;
@@ -259,7 +263,10 @@ nav input[type=text]:hover {
 .middle {
   display: flex;
 }
-.SOP, .decisions {
+#decisions-full {
+  display: none;
+}
+.SOP, .decisions.container {
   width: 50%;
 }
 .SOP h2, .decisions h2 {
@@ -279,6 +286,21 @@ background-color: #5f9637;
 }
 .decisions ul {
   padding-left: 3rem;
+}
+.expand-button-d {
+  position: relative;
+  left: 82%;
+  bottom: 0;
+  font-size: 1rem;
+  background-color: #c9b6c6;
+  color: black;
+  margin: 1rem 0.5rem 0.5rem 0.5rem;
+  padding: 0.75rem;
+  border: 1px solid #5f9637;
+}
+.expand-button-d:hover {
+  color: white;
+  background-color: #5f9637;
 }
 
 /*Possible Actions Section*/

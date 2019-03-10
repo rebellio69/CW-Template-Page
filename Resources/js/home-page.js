@@ -19,3 +19,14 @@ function expandFunction() {
     overviewText.style.display = "none";
   }
 }
+ // key decisions section
+
+function considerationsFunction() {
+  var decisionsText = document.getElementById("decisions-full");
+  if (decisionsText.style.display === "none") {
+    decisionsText.style.display = "block";
+  }
+  else {
+    decisionsText.style.display = "none";
+  }
+}
